@@ -1,0 +1,523 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #ffffff, #fff8e1);
+    text-align: center;
+   
+}
+section{
+    padding: 0px;
+}
+
+
+.navbar {
+background: rgba(0, 0, 0, 0.9);
+padding: 10px 10px;
+transition: background 0.3s ease-in-out;
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 1000;
+}
+
+/* Navbar al hacer scroll */
+.navbar.scrolled {
+background: rgba(0, 0, 0, 1);
+box-shadow: 0 4px 10px #d9c15d;
+}
+.navbar-brand {
+padding-top: 0;
+padding-bottom: 0;
+}
+/* Logo adaptable */
+.navbar-brand img {
+width: 70px; /* Tamaño normal */
+transition: width 0.3s ease;
+margin-right: 50px;
+}
+
+/* Logo más pequeño en dispositivos móviles */
+@media (max-width: 768px) {
+.navbar-brand img {
+width: 60px; /* Tamaño reducido en celulares */
+}
+}
+
+/* Menú */
+.navbar-nav .nav-link {
+color: white;
+font-size: 18px;
+padding: 10px;
+transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Animación en hover */
+.navbar-nav .nav-link:hover {
+color: #d9c15d !important;
+transform: translateY(-3px);
+}
+
+/* Botón hamburguesa */
+.navbar-toggler {
+border: none;
+}
+
+.navbar-toggler:focus {
+box-shadow: none;
+}
+
+ section {
+    padding: 120px 20px 50px;
+    margin-top: 20px; /* Ajusta el espacio superior */
+margin-bottom: 20px; /* Ajusta el espacio inferior */
+padding: 10px 0;
+}
+#inicio h2{
+    color: #9e8b3c;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 35px;
+}
+#inicio p{
+    color: rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+ #vision-mision{
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 40px auto;
+    border-radius: 10px;
+    width: 70%;
+    max-width: 700px;
+}
+#vision-mision h2,p{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #fff8e1;
+}
+#vision-mision h2{
+    font-size: 25px;
+    color: #9e8b3c;
+}
+#vision-mision h3{
+    color: #ffffff;
+}
+
+/* carrusel */
+#carouselInicio {
+max-width: 40%;  /* Ajusta el porcentaje según necesites */
+border-radius: 1px #d9c15d ;
+
+margin: 0 auto;  /* Centra el carrusel en la página */
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+background-color: black; /* Fondo negro */
+border-radius: 10%; /* Bordes redondeados */
+width: 30px; /* Tamaño */
+height: 30px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+opacity: 1; /* Asegurar visibilidad */
+}
+
+#inicio {
+    font-size: 26px; /* Se achica el tamaño de las letras */
+ margin-top: 90px;
+    color: #d9c15d ;
+}
+
+ #catalogo{
+    border: 2px solid #000000;
+ }
+.productos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+}
+
+.producto {
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    padding: 5px;
+    width: 220px; /* Se achica el tamaño del contenedor */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+.producto h3{
+  font-size: 20px;
+}
+
+.producto p{
+  font-size: 15px;
+}
+.titulo_catalogo {
+    color: rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 15px;
+    font-size: 38px; /* Se achica el tamaño de las letras */
+}
+
+.producto:hover {
+    transform: translateY(-10px);
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.precio {
+    font-weight: bold;
+    color: #00bcd4;
+    font-size: 20px; /* Se achica el tamaño de las letras */
+}
+
+.carrito-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background:#000000 ;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carrito-icon img {
+    width: 20px;
+    height: 20px;
+}
+.producto h3{
+    color: #fff8e1;
+   
+}
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px 0;
+    margin-top: 30px;
+}
+
+.producto-detalles {
+
+    display: none;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+}
+.carousel-inner img {
+    width: 100%; /* Esto hará que las imágenes ocupen todo el ancho del contenedor */
+height: auto; /* Esto mantiene la proporción de las imágenes */
+max-width: 80%; /* Esto limita el tamaño máximo de las imágenes al 80% del contenedor */
+margin: 0 auto; 
+}
+/* contacto */ 
+.orange {
+color: #d1b753 ;
+}
+
+#contacto{
+height: 100px;
+place-items: center;
+height: 75vh;
+
+}
+.form-container {
+max-width: 700px;
+margin: 30px;
+background-color: #000000;
+padding: 30px;
+border-left: 5px solid #d1b753;
+clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+}
+
+.heading {
+display: block;
+color: white;
+font-size: 1.5rem;
+font-weight: 800;
+margin-bottom: 20px;
+}
+
+.form-container .form .input {
+color: #87a4b6;
+width: 100%;
+background-color: #002733;
+border: none;
+outline: none;
+padding: 10px;
+margin-bottom: 20px;
+font-weight: bold;
+transition: all 0.2s ease-in-out;
+border-left: 1px solid transparent;
+}
+
+.form-container .form .input:focus {
+border-left: 5px solid #d1b753;
+}
+
+.form-container .form .textarea {
+width: 100%;
+padding: 10px;
+border: none;
+outline: none;
+background-color: #013747;
+color:#d1b753 ;
+font-weight: bold;
+resize: none;
+max-height: 150px;
+margin-bottom: 20px;
+border-left: 1px solid transparent;
+transition: all 0.2s ease-in-out;
+}
+
+.form-container .form .textarea:focus {
+border-left: 5px solid #d1b753;
+}
+
+.form-container .form .button-container {
+display: flex;
+gap: 10px;
+}
+
+.form-container .form .button-container .send-button {
+flex-basis: 70%;
+background: #d1b753;
+padding: 10px;
+color: #001925;
+text-align: center;
+font-weight: bold;
+border: 1px solid transparent;
+transition: all 0.2s ease-in-out;
+}
+
+.form-container .form .button-container .send-button:hover {
+background: transparent;
+border: 1px solid #d1b753;
+color:#d1b753 ;
+}
+
+.form-container .form .button-container .reset-button-container {
+filter: drop-shadow(1px 1px 0px #d1b753);
+flex-basis: 30%;
+}
+
+.form-container .form .button-container .reset-button-container .reset-button {
+position: relative;
+text-align: center;
+padding: 10px;
+color:#d1b753 ;
+font-weight: bold;
+background:#001925;
+clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
+transition: all 0.2s ease-in-out;
+}
+
+.form-container .form .button-container .reset-button-container .reset-button:hover {
+background:#d1b753 ;
+color: #001925;
+}
+/* boton redes sociales */
+/* From Uiverse.io by david-mohseni */ 
+.wrapper {
+display: inline-flex;
+list-style: none;
+height: 120px;
+width: 100%;
+font-family: "Poppins", sans-serif;
+justify-content: center;
+margin-bottom: -200px;
+
+}
+.icon svg {
+fill: #000; /* Puedes cambiar #000 por el color que prefieras */
+}
+.wrapper .icon {
+position: relative;
+background: #ffffff;
+border-radius: 50%;
+margin: 10px;
+width: 50px;
+height: 50px;
+font-size: 18px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+box-shadow: 0 10px 10px rgb(255, 255, 255);
+cursor: pointer;
+transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+position: absolute;
+top: 0;
+font-size: 14px;
+background: #ffffff;
+color: #ffffff;
+padding: 5px 8px;
+border-radius: 5px;
+box-shadow: 0 10px 10px rgba(255, 254, 254, 0.925);
+opacity: 0;
+pointer-events: none;
+transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+position: absolute;
+content: "";
+height: 8px;
+width: 8px;
+background: #ffffff;
+bottom: -3px;
+left: 50%;
+transform: translate(-50%) rotate(45deg);
+transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+top: -45px;
+opacity: 1;
+visibility: visible;
+pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+text-shadow: 0px -1px 0px rgba(255, 255, 255, 0.911);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+background: #1877f2;
+color: #ffffff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+background: #1da1f2;
+color: #ffffff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+background: #e4405f;
+color: #fffefe;
+}
+.wrapper .whatsapp:hover,
+.wrapper .whatsapp:hover .tooltip,
+.wrapper .whatsapp:hover .tooltip::before {
+background: #25D366; /* Color oficial de WhatsApp */
+color: #ffffff; /* Color del texto en hover */
+}
+
+.footer{
+margin-top: 130px;
+background-color: #000;
+}
+
+@media (max-width: 768px) {
+    .producto {
+        max-width: 90%;
+        margin: 10px 0;
+        padding: auto;
+    }
+    #inicio h2,h3 {
+    font-size: 15px; /* Se achica el tamaño de las letras */
+   
+} 
+#inicio p{
+    font-size: 13px;
+}
+
+.subtitulo{
+font-size: 10px;
+}
+#carouselInicio {
+max-width: 100%;  /* Ajusta el porcentaje según necesites */
+margin: 0 auto;  /* Centra el carrusel en la página */
+}
+#inicio{
+    padding: 10px;
+    margin: 40px auto;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 900px;
+    margin-top: 85px;
+}
+.inicio{
+margin-top: 100px;
+}
+.producto {
+  
+    border-radius: 10px;
+    padding: 5px;
+    width: 150px; /* Se achica el tamaño del contenedor */
+    text-align: center;
+   
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+.precio {
+    font-weight: bold;
+    color: #00bcd4;
+    font-size: 13px; /* Se achica el tamaño de las letras */
+}
+
+.carrito-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.producto-detalles p{
+  font-size: 8px;
+}
+}
+
+@media (max-width: 768px) {
+.form-container {
+width: 95%;
+padding: 20px;
+}
+
+.form-container .form .button-container {
+flex-direction: column;
+}
+
+.form-container .form .button-container .send-button,
+.form-container .form .button-container .reset-button {
+width: 100%;
+}
+}
+
+@media (max-width: 480px) {
+.heading {
+font-size: 1.2rem;
+}
+}
+
